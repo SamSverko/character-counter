@@ -1,2 +1,3 @@
 # character-counter
-A simple website to count paragraph characters.
+
+A simple website for counter characters.

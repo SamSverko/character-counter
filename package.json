@@ -1,0 +1,39 @@
+{
+    "name": "character-counter",
+    "version": "1.0.0",
+    "description": "A simple website for counter characters.",
+    "keywords": [
+        "hobby-project",
+        "open-source"
+    ],
+    "homepage": "https://github.com/SamSverko/character-counter",
+    "bugs": {
+        "url": "https://github.com/SamSverko/character-counter/issues",
+        "email": "sam.sverko@gmail.com"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Sam Sverko",
+        "email": "sam.sverko@gmail.com",
+        "url": "https://github.com/SamSverko"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SamSverko/character-counter.git"
+    },
+    "scripts": {
+        "build": "npm run build-script && npm run build-styles",
+        "build-script": "tsc src/script.ts --outFile build/script.js",
+        "build-styles": "sass src/styles.scss build/styles.css --no-source-map --style compressed",
+        "dev": "concurrently \"npm run dev-server\" \"npm run dev-script\" \"npm run dev-styles\"",
+        "dev-server": "live-server --open=./build",
+        "dev-script": "tsc src/script.ts --outFile build/script.js --watch",
+        "dev-styles": "sass src/styles.scss build/styles.css --no-source-map --style compressed --watch"
+    },
+    "devDependencies": {
+        "concurrently": "^7.1.0",
+        "live-server": "^1.2.2",
+        "sass": "^1.51.0",
+        "typescript": "^4.6.4"
+    }
+}

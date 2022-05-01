@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+        <link href="./styles.css" rel="stylesheet">
+
+        <title>Character Counter</title>
+    </head>
+    <body>
+        <div class="content-grid">
+            <div class="header">
+                <h1>Character Counter</h1>
+            </div>
+
+            <div class="input-label">
+                <h2>Input</h2>
+
+                <label id="textarea-label">Enter your text:</label>
+            </div>
+
+            <div class="input-textarea">
+                <span aria-labelledby="textarea-label" contenteditable="true" id="textarea-input" role="textbox"></span>
+            </div>
+
+            <div class="output-label">
+                <h2>Output</h2>
+
+                <span>Character count per paragraph: </span>
+            </div>
+
+            <div class="output-list">
+                <ol id="output-list"></ol>
+            </div>
+
+            <div class="settings">
+                <h2>Settings</h2>
+
+                <div class="input-group">
+                    <label for="max-paragraph-char-count">Max character count:</label>
+                    <input id="max-paragraph-char-count" type="number" value="256">
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
