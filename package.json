@@ -23,12 +23,12 @@
     },
     "scripts": {
         "build": "npm run build-script && npm run build-styles",
-        "build-script": "tsc src/script.ts --outFile build/script.js",
-        "build-styles": "sass src/styles.scss build/styles.css --no-source-map --style compressed",
+        "build-script": "tsc dev/script.ts --outFile script.js",
+        "build-styles": "sass dev/styles.scss styles.css --no-source-map --style compressed",
         "dev": "concurrently \"npm run dev-server\" \"npm run dev-script\" \"npm run dev-styles\"",
-        "dev-server": "live-server --open=./build",
-        "dev-script": "tsc src/script.ts --outFile build/script.js --watch",
-        "dev-styles": "sass src/styles.scss build/styles.css --no-source-map --style compressed --watch"
+        "dev-server": "live-server --open=./index.html",
+        "dev-script": "tsc dev/script.ts --outFile script.js --watch",
+        "dev-styles": "sass dev/styles.scss styles.css --no-source-map --style compressed --watch"
     },
     "devDependencies": {
         "concurrently": "^7.1.0",
